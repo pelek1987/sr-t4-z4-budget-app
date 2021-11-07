@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import Table, {Column, OperationRecord} from "./components/Table";
+import Form, {Input} from './components/Form'
 import data from "./data/data.json";
 import './App.scss';
 
