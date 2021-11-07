@@ -1,12 +1,19 @@
 function Column({children}) {
     return (
         <td>
-            <tr>
-                <th>Nazwa</th>
-                <th>Kwota</th>
-                <th>Kategoria</th>
-            </tr>
-            {children}
+            <table>
+                <thead>
+                <tr>
+                    <td>Nazwa</td>
+                    <td>Kwota</td>
+                    <td>Kategoria</td>
+                    <td>Akcje</td>
+                </tr>
+                </thead>
+                <tbody>
+                {children}
+                </tbody>
+            </table>
         </td>
     );
 }

@@ -5,6 +5,7 @@ function Input({
                    label,
                    type,
                    name,
+                   value,
                    placeholder,
                    handleChange,
                    register,
@@ -21,6 +22,7 @@ function Input({
                 id={id}
                 type={type}
                 name={name}
+                value={value}
                 placeholder={placeholder}
                 onChange={handleChange}
                 {...register(name, {required})}

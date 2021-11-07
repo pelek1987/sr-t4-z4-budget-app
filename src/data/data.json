@@ -1,10 +1,20 @@
 {
   "income": [
     {
+      "id": "f0f95dca-fec1-45e0-860b-b28f218015f4",
+      "type": "income",
       "name": "Umowa o pracę",
       "amount": 4000,
       "category": "pensja"
     }
   ],
-  "expenditures": []
+  "expenditures": [],
+  "categories": [
+    "pensja",
+    "rachunki",
+    "rozrywka",
+    "zakupy",
+    "żywność",
+    "inne"
+  ]
 }
