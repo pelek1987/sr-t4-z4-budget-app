@@ -1,0 +1,10 @@
+{
+  "income": [
+    {
+      "name": "Umowa o pracę",
+      "amount": 4000,
+      "category": "pensja"
+    }
+  ],
+  "expenditures": []
+}
