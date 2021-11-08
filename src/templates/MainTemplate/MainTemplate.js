@@ -1,4 +1,5 @@
 import Menu, {Link} from "../../components/Menu";
+import Content from "../../components/Content/Contents";
 
 function MainTemplate({children}) {
     return (
@@ -8,9 +9,9 @@ function MainTemplate({children}) {
                 <Link label="Home" to="/"/>
                 <Link label="Add Form" to="/add-form"/>
             </Menu>
-            <div>
+            <Content>
                 {children}
-            </div>
+            </Content>
         </div>
     );
 }
