@@ -1,0 +1,17 @@
+.Menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  padding-top: 20px;
+  background-color: #625d5d;
+
+  &__list {
+    margin: 10px;
+    list-style: none;
+
+    &-item {
+      margin-bottom: 15px;
+    }
+  }
+}

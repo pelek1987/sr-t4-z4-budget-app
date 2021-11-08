@@ -1,9 +1,10 @@
+import {Redirect} from "react-router-dom";
 import Form, {Input, Select} from "../components/Form";
 import Button from "../components/Button";
 import {useForm} from "react-hook-form";
 import data from "../data/data.json";
 
-function AddForm({onSubmit}) {
+function AddForm({onSubmit, isFormSent}) {
     const {
         handleSubmit,
         register,
@@ -12,29 +13,36 @@ function AddForm({onSubmit}) {
         }
     } = useForm();
 
+    if(isFormSent) {
+        return <Redirect to={'/'} />
+    }
+
     return (
         <>
             <Form handleSubmit={handleSubmit(onSubmit)}>
-                <Input
-                    id="expenditure"
-                    label="Expenditure"
-                    type="radio"
-                    name="type"
-                    value="expenditure"
-                    register={register}
-                    required
-                    errors={errors}
-                />
-                <Input
-                    id="income"
-                    label="Income"
-                    type="radio"
-                    name="type"
-                    value="income"
-                    register={register}
-                    required
-                    errors={errors}
-                />
+                <div className="Form__radio-section">
+                    <Input
+                        id="expenditure"
+                        label="Expenditure"
+                        type="radio"
+                        name="type"
+                        value="expenditure"
+                        register={register}
+                        required
+                        errors={errors}
+                    />
+                    <Input
+                        id="income"
+                        label="Income"
+                        type="radio"
+                        name="type"
+                        value="income"
+                        register={register}
+                        required
+                        errors={errors}
+                    />
+                </div>
+
                 <Input
                     id="name"
                     type="text"

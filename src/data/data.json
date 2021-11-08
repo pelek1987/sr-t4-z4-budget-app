@@ -8,7 +8,15 @@
       "category": "pensja"
     }
   ],
-  "expenditures": [],
+  "expenditures": [
+    {
+      "id": "f0f95dca-fec1-45e0-860b-b5cf218015f4",
+      "type": "expenditure",
+      "name": "Gaz",
+      "amount": 2000,
+      "category": "rachunki"
+    }
+  ],
   "categories": [
     "pensja",
     "rachunki",

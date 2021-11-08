@@ -10,6 +10,7 @@ import './App.scss';
 function App() {
     const [income, setIncome] = useState([])
     const [expenditures, setExpenditures] = useState([])
+    const [isFormSent, setIsFormSent] = useState(false);
     useEffect(() => {
         setExpenditures(data.expenditures);
         setIncome(data.income);
@@ -32,6 +33,8 @@ function App() {
             incomeCopy.push(newData);
             setIncome(incomeCopy);
         }
+
+        setIsFormSent(true);
     }
 
     const handleDeleteRecord = (e, id, type) => {
@@ -51,7 +54,7 @@ function App() {
                     <MainTemplate>
                         <Switch>
                             <Route path="/add-form">
-                                <AddForm onSubmit={onSubmit} />
+                                <AddForm onSubmit={onSubmit} isFormSent={isFormSent} />
                             </Route>
                             <Route path="/">
                                 <Home expenditures={expenditures} income={income} handleDeleteRecord={handleDeleteRecord}/>

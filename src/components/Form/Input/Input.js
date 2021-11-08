@@ -28,7 +28,7 @@ function Input({
                 {...register(name, {required})}
             />
             {errors[name] && (
-                <span>This field is required</span>
+                <span style={{marginLeft: 15, color: 'red'}}>This field is required</span>
             )}
         </div>
     );

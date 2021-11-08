@@ -1,6 +1,8 @@
+import './Table.scss'
+
 function Table({children}) {
     return (
-        <table>
+        <table className="Table">
             <thead>
             <tr>
                 <th>

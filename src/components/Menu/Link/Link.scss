@@ -1,0 +1,15 @@
+.Menu__link {
+  display: block;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Arial", sans-serif;
+  color: #fff;
+
+  &--active {
+    color: #888;
+    font-weight: 700;
+  }
+}
+

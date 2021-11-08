@@ -1,0 +1,18 @@
+.Form {
+  padding-left: 200px;
+
+  &__group {
+    margin-right: 15px;
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    margin-right: 10px;
+    font-size: 1.1rem;
+  }
+
+  &__radio-section {
+    display: flex;
+  }
+}
+

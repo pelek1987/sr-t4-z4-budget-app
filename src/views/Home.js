@@ -24,7 +24,7 @@ function Home({expenditures, income, handleDeleteRecord}) {
         />));
 
     return (
-        <div>
+        <>
             <Table>
                 <Column>
                     {expenditures ? expendituresRecords : <div>Loading data...</div>}
@@ -33,7 +33,7 @@ function Home({expenditures, income, handleDeleteRecord}) {
                     {income ? incomeRecords : <div>Loading data...</div>}
                 </Column>
             </Table>
-        </div>
+        </>
     );
 }
 

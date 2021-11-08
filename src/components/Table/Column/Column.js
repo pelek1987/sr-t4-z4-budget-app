@@ -1,13 +1,15 @@
+import './Columns.scss';
+
 function Column({children}) {
     return (
-        <td>
+        <td className="Column">
             <table>
                 <thead>
                 <tr>
-                    <td>Nazwa</td>
-                    <td>Kwota</td>
-                    <td>Kategoria</td>
-                    <td>Akcje</td>
+                    <th>Nazwa</th>
+                    <th>Kwota</th>
+                    <th>Kategoria</th>
+                    <th>Akcje</th>
                 </tr>
                 </thead>
                 <tbody>

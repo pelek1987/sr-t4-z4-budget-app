@@ -1,0 +1,27 @@
+.Column {
+
+  table {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #333;
+  }
+
+  table th {
+    padding: 10px;
+    font-size: 1.1rem;
+  }
+
+  table tr {
+    background-color: #bdb5b5;
+  }
+
+  table tr:nth-child(2n) {
+    background-color: #888282;
+  }
+
+  table thead tr {
+    background-color: #625d5d;
+  }
+}
+
+

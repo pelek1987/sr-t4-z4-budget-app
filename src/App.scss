@@ -1,1 +1,16 @@
-.App {}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Tahoma", sans-serif;
+}
+
+.App {
+  position: relative;
+  height: 95vh;
+  margin: 15px;
+  background-color: #faf2f2;
+}
