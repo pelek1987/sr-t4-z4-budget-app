@@ -69,7 +69,7 @@ function App() {
                     <MainTemplate>
                         <Switch>
                             <Route path="/add-form">
-                                <AddForm onSubmit={onSubmit} isFormSent={isFormSent} />
+                                <AddForm onSubmit={onSubmit} isFormSent={isFormSent} setIsFormSent={setIsFormSent} />
                             </Route>
                             <Route path="/">
                                 <Home expenditures={expenditures} income={income} handleDeleteRecord={handleDeleteRecord}/>

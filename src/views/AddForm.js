@@ -1,10 +1,11 @@
-import {Redirect} from "react-router-dom";
+import {useEffect} from "react";
+import {Link} from 'react-router-dom'
+import {useForm} from "react-hook-form";
 import Form, {Input, Select} from "../components/Form";
 import Button from "../components/Button";
-import {useForm} from "react-hook-form";
 import categories from "../data/categories.json";
 
-function AddForm({onSubmit, isFormSent}) {
+function AddForm({onSubmit, isFormSent, setIsFormSent}) {
     const {
         handleSubmit,
         register,
@@ -13,9 +14,13 @@ function AddForm({onSubmit, isFormSent}) {
         }
     } = useForm();
 
-    if(isFormSent) {
-        return <Redirect to={'/'} />
-    }
+    useEffect(() => {
+
+        return () => {
+            setIsFormSent(false)
+        };
+    }, [setIsFormSent]);
+
 
     return (
         <>
@@ -67,6 +72,11 @@ function AddForm({onSubmit, isFormSent}) {
                     {categories.map(category => <option key={category} value={category}>{category}</option>)}
                 </Select>
                 <Button type="submit" label="Dodaj"/>
+                {isFormSent && (
+                    <div style={{margin: 10, color: "green"}}>
+                        <p>Dodano pomyślnie operację do zestawienia</p>
+                        <Link style={{textDecoration: "none", color: "darkcyan"}} to="/">Idź do zestawienia</Link>
+                    </div>)}
             </Form>
         </>
     );
