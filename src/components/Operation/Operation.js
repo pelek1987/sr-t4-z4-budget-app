@@ -1,6 +1,6 @@
-import Button from "../../Button";
+import Button from "../Button";
 
-function OperationRecord({id, name, amount, category, handleClick, type}) {
+function Operation({id, name, amount, category, handleClick, type}) {
     return (
         <tr>
             <td>{name}</td>
@@ -11,4 +11,4 @@ function OperationRecord({id, name, amount, category, handleClick, type}) {
     );
 }
 
-export default OperationRecord;
+export default Operation;

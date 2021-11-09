@@ -2,7 +2,7 @@ import {Redirect} from "react-router-dom";
 import Form, {Input, Select} from "../components/Form";
 import Button from "../components/Button";
 import {useForm} from "react-hook-form";
-import data from "../data/data.json";
+import categories from "../data/categories.json";
 
 function AddForm({onSubmit, isFormSent}) {
     const {
@@ -64,7 +64,7 @@ function AddForm({onSubmit, isFormSent}) {
                     required
                 />
                 <Select id="category" name="category" label="Kategoria" register={register} errors={errors} required>
-                    {data.categories.map(category => <option key={category} value={category}>{category}</option>)}
+                    {categories.map(category => <option key={category} value={category}>{category}</option>)}
                 </Select>
                 <Button type="submit" label="Dodaj"/>
             </Form>

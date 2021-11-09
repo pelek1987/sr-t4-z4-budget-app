@@ -16,13 +16,5 @@
       "amount": 2000,
       "category": "rachunki"
     }
-  ],
-  "categories": [
-    "pensja",
-    "rachunki",
-    "rozrywka",
-    "zakupy",
-    "żywność",
-    "inne"
   ]
 }

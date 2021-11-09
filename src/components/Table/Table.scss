@@ -1,0 +1,16 @@
+.Table {
+  width: 90%;
+  text-align: center;
+  background-color: #706f6f;
+  tbody tr {
+    background-color: #fff;
+  }
+
+  tbody tr:nth-child(2n) {
+    background-color: #c0c0c0;
+  }
+
+  td, th {
+    padding: 10px;
+  }
+}

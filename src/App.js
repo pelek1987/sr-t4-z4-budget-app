@@ -12,8 +12,9 @@ function App() {
     const [expenditures, setExpenditures] = useState([])
     const [isFormSent, setIsFormSent] = useState(false);
     useEffect(() => {
-        setExpenditures(data.expenditures);
-        setIncome(data.income);
+        const storageData = JSON.parse(localStorage.getItem('data')) || data;
+        setExpenditures(storageData.expenditures);
+        setIncome(storageData.income);
     }, []);
 
     const onSubmit = (formData) => {
@@ -22,17 +23,23 @@ function App() {
             id: uuid()
         }
 
+        const incomeCopy = [...income]
+        const expendituresCopy = [...expenditures]
+
         if (formData.type === 'expenditure') {
-            const expendituresCopy = [...expenditures]
             expendituresCopy.push(newData);
             setExpenditures(expendituresCopy);
         }
 
         if (formData.type === 'income') {
-            const incomeCopy = [...income]
             incomeCopy.push(newData);
             setIncome(incomeCopy);
         }
+
+        localStorage.setItem('data', JSON.stringify({
+            expenditures: expendituresCopy,
+            income: incomeCopy,
+        }))
 
         setIsFormSent(true);
     }
@@ -41,10 +48,18 @@ function App() {
         if (type === "income") {
             const newIncome = income.filter(income => income.id !== id);
             setIncome(newIncome);
+            localStorage.setItem('data', JSON.stringify({
+                expenditures,
+                income: newIncome
+            }))
         }
         if (type === "expenditure") {
             const newExpenditures = expenditures.filter(expenditure => expenditure.id !== id);
             setExpenditures(newExpenditures);
+            localStorage.setItem('data', JSON.stringify({
+                expenditures: newExpenditures,
+                income,
+            }))
         }
     }
 
